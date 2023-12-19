@@ -5,6 +5,15 @@ import os
 
 print('Process (%s) start...' % os.getpid())
 # Only works on Unix/Linux/Mac:
+‘’‘
+This line is crucial. os.fork() creates a new child process. 
+After this line, the rest of the code will run in two separate processes: 
+    the parent 
+    and the child. 
+The fork() method returns 
+    0 in the child process 
+    and the child's process ID in the parent process.
+’‘’
 pid = os.fork()
 if pid == 0:
     print('I am child process (%s) and my parent is %s.' % (os.getpid(), os.getppid()))

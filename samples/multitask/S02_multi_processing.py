@@ -15,3 +15,12 @@ if __name__=='__main__':
     p.start()
     p.join()
     print('Child process end.')
+
+'''
+Output:
+Parent process 37748.
+Child process will start.
+Run child process test (37750)...
+Child process end.
+
+'''

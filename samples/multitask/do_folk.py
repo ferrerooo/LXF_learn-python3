@@ -11,7 +11,7 @@ After this line, the rest of the code will run in two separate processes:
     the parent 
     and the child. 
 The fork() method returns 
-    0 in the child process 
+    0 in the child process  
     and the child's process ID in the parent process.
 ’‘’
 pid = os.fork()

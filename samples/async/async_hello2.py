@@ -15,6 +15,7 @@ loop.run_until_complete(asyncio.wait(tasks))
 loop.close()
 
 ‘’‘
+# 上面代码跑起来有问题，下面的代码好用
 import asyncio
 
 async def hello():

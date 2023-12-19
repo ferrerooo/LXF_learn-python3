@@ -13,7 +13,7 @@ def long_time_task(name):
 
 if __name__=='__main__':
     print('Parent process %s.' % os.getpid())
-    p = Pool(4) # 进程池的大小是4，所以output里 前4个进程结束后，第五个进程才能开始。如果process pool为5，则5个进程可以同时跑
+    p = Pool(4) # 进程池的大小是4，所以output里 前4个进程结束后，第五个进程才能开始。如果process pool为5，则5个进程可以同时跑。
     for i in range(5):
         p.apply_async(long_time_task, args=(i,))
     print('Waiting for all subprocesses done...')
